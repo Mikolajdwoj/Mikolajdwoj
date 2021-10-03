@@ -1,0 +1,26 @@
+README
+zadanie rekrutacyjne
+aby otworzyć aplikację:
+1.Utwórz nowy projekt w framework'u laravel 8 (dla systemu windows wymagany jest wsl, composer i php8)
+2. Podmień/dodaj zamieszczone pliki
+3. Uruchom MySQL i Apache, np. używając XAMPP'a
+4. Uruchom projekt(w moim przypadku, na systemie windows terminal -> cd */git -> phpstorm . -> w terminalu środowiska "php artisan serve". Naciskamy na wygenerowany link, domyślnie 127.0.0.1).
+Aplikacja została zaprojektowana do współpracy z bazami danych "phpmyadmin" (domyślnie http://localhost/phpmyadmin/) i wymaga gotowej bazy danych "members" z utworzoną tabelą "members", zawierającą następujące wartości: 
+currency	VARCHAR"
+PeriodLength	INT
+groupby	VARCHAR
+0	VARCHAR
+1	VARCHAR
+2	VARCHAR
+3	VARCHAR
+4	VARCHAR
+5	VARCHAR
+6	VARCHAR
+7	VARCHAR
+
+Aplikacja pozwala na wpisanie docelowej ścieżki pliku typu JSON, zarówno lokalnej, jak i internetowej. Przycisk "Load JSON URL" zapisze dane z danego pliku JSON do bazy. Aplikacja nie posiada zabezpieczenia, więc błędny adres poinformuje nas o błędzie.
+Aplikacja pozwala również na manualne uzupełnienie danych. Przycisk "Add manualy" zapisze do bazy wpisane wartości.
+Przycisk "retrieve data" wyświetli aktualne wartości tabeli.
+Działa tylko dla hosta "127.0.0.1", użytkownika "root", bez hasła.
+W razie potrzeby zmian tych danych, wystarczy nawigować do */git/app/Http/Controllers/datacontrol.php i edytować linijki 66 - 68.
+
